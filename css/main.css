@@ -20,10 +20,6 @@
   src: url(../assets/fonts/Averta-Semibold.woff);
 }
 
-description{
-  margin-top: 24px;
-}
-
 body{
   background-color: #eee;
   color: #333;
@@ -33,7 +29,7 @@ body{
   align-items: center;
   font-family: var(--content-typography-bold);
   text-align: center;
-  margin: 0 24px;
+  margin: 24px;
 }
 
 header{
