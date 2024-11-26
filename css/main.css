@@ -21,7 +21,7 @@
 }
 
 description{
-  margin-top:16px;
+  margin-top: 24px;
 }
 
 body{
@@ -29,12 +29,11 @@ body{
   color: #333;
   display: flex;
   flex-direction: column;
-  width: calc(100vw);
-  height: calc(100vh);
-  justify-content: flex;
+  justify-content: flex-start;
   align-items: center;
   font-family: var(--content-typography-bold);
   text-align: center;
+  margin: 0 24px;
 }
 
 header{
@@ -51,7 +50,6 @@ h1{
 ul.ex-nav {
   background-color: white;
   border-radius: 16px;
-  margin: 0;
   padding: 40px;
   display: flex;
   gap: 24px;
