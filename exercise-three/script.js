@@ -18,44 +18,49 @@ function renderIMC(html) {
   imcBox.innerHTML += html;
 }
 
-const weight = prompt("Introduzca su peso en kilogramos", "0"); // paso 1
-const height = prompt("Introduzca su altura en centímetros", "0"); // paso 2
+const weight = parseFloat(prompt("Introduzca su peso en kilogramos", "0")); // paso 1
+const height = parseFloat(prompt("Introduzca su altura en centímetros", "0")); // paso 2
 const imcCalc = (weight) / ((height / 100) * (height / 100)); // paso 3
 
-if (imcCalc < 18.5)  { // paso 4
+if (!isNaN(imcCalc) && imcCalc < 18.5)  { // paso 4
   renderIMC(`
-    <p class="result__text">Tu IMC: <span class="number">${imcCalc}</span></p>
+    <p class="result__text">Tu IMC: <span class="number">${imcCalc.toFixed(2)}</span></p>
     <p class="result__text">Estás por debajo de lo saludable.</p>
     <button id="repeat" type="submit">Repetir!</button>
 `); 
-} else if (imcCalc >= 18.5 && imcCalc < 25) {
+} else if (!isNaN(imcCalc) && imcCalc >= 18.5 && imcCalc < 25) {
 renderIMC(`
-    <p class="result__text">Tu IMC: <span class="number">${imcCalc}</span></p>
+    <p class="result__text">Tu IMC: <span class="number">${imcCalc.toFixed(2)}</span></p>
     <p class="result__text">Estás sano.</p>
     <button id="repeat" type="submit">Repetir!</button>
 `);
-} else if (imcCalc >= 25 && imcCalc < 30) {
+} else if (!isNaN(imcCalc) && !isNaN(imcCalc) && imcCalc >= 25 && imcCalc < 30) {
   renderIMC(`
-      <p class="result__text">Tu IMC: <span class="number">${imcCalc}</span> </p>
+      <p class="result__text">Tu IMC: <span class="number">${imcCalc.toFixed(2)}</span> </p>
       <p class="result__text"> Tienes sobrepeso.</p>
       <button id="repeat" type="submit">Repetir!</button>
   `);
-} else if (imcCalc >= 30 && imcCalc < 35) {
+} else if (!isNaN(imcCalc) && imcCalc >= 30 && imcCalc < 35) {
   renderIMC(`
-      <p class="result__text">Tu IMC: <span class="number">${imcCalc}</span></p>
+      <p class="result__text">Tu IMC: <span class="number">${imcCalc.toFixed(2)}</span></p>
       <p class="result__text">Tienes Obesidad I.</p>
       <button id="repeat" type="submit">Repetir!</button>
   `);
-} else if (imcCalc >= 35 && imcCalc < 40) {
+} else if (!isNaN(imcCalc) && imcCalc >= 35 && imcCalc < 40) {
   renderIMC(`
-      <p class="result__text">Tu IMC: <span class="number">${imcCalc}</span></p>
+      <p class="result__text">Tu IMC: <span class="number">${imcCalc.toFixed(2)}</span></p>
       <p class="result__text">Tienes Obesidad II.</p>
+      <button id="repeat" type="submit">Repetir!</button>
+  `);
+} else if (!isNaN(imcCalc) && imcCalc >= 40) {
+  renderIMC(`
+      <p class="result__text">Tu IMC: <span class="number">${imcCalc.toFixed(2)}</span></p>
+      <p class="result__text">Tienes Obesidad III.</p>
       <button id="repeat" type="submit">Repetir!</button>
   `);
 } else {
   renderIMC(`
-    <p class="result__text">Tu IMC: <span class="number">${imcCalc}</span></p>
-    <p class="result__text">Tienes Obesidad III</p>
+    <p class="result__text">¿Has metido números?</p>
     <button id="repeat" type="submit">Repetir!</button>
   `);
 } 
