@@ -9,6 +9,7 @@ function render(html) {
  * 3. Compruebo que el valor dado es numérico
  *    A Si es número, pinto el valor proporcionado por el usuario y el resultado operado
  *    B Si no es número, pido amablemente repetición
+ * 4. Repetir ejercicio
  */
 
 const firstValue = +prompt("Introduzca unos graditos Celsius, que yo se los convierto", "0"); // paso 1
@@ -36,8 +37,15 @@ if (Number(firstValue) % 1 === 0)  { // paso 3
       <p class="result__text">
           Han resultado ser: <span class="farenheit">${secondValue}ºF</span> grados Farenheit 
       </p>
+      <button id="repeat" type="submit">Repetir!</button>
   `); 
 } else {
   // no es número: paso 3B
-  render(`<p class="result__text">Eso no eran graditos, por favor repite.</p>`);
+  render(`
+    <p class="result__text">Eso no eran graditos, por favor repite.</p>
+    <button id="repeat" type="submit">Repetir!</button>
+  `);
 } 
+
+document.getElementById("repeat").onclick = function() {location.reload()}; // paso 4
+

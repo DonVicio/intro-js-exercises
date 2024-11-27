@@ -73,3 +73,22 @@ li.ex-link.current > a {
 background-color: black;
 pointer-events: none;
 }
+
+button#repeat {
+  display: flex;
+  color: white;
+  font-size: 16px;;
+  background-color: black;
+  font-family: var(--content-typography-bold);
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+}
+
+button#repeat:hover {
+  background-color: #333;
+  transition: all 0.3s;
+}
