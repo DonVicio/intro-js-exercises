@@ -48,7 +48,7 @@ ul.ex-nav {
   border-radius: 16px;
   padding: 40px;
   display: flex;
-  gap: 24px;
+  gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
