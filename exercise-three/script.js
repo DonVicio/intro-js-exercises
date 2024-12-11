@@ -34,7 +34,7 @@ renderIMC(`
     <p class="result__text">Estás sano.</p>
     <button id="repeat" type="submit">Repetir!</button>
 `);
-} else if (!isNaN(imcCalc) && !isNaN(imcCalc) && imcCalc >= 25 && imcCalc < 30) {
+} else if (!isNaN(imcCalc) && imcCalc >= 25 && imcCalc < 30) {
   renderIMC(`
       <p class="result__text">Tu IMC: <span class="number">${imcCalc.toFixed(2)}</span> </p>
       <p class="result__text"> Tienes sobrepeso.</p>
