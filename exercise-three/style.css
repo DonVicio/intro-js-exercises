@@ -20,7 +20,7 @@ section {
 button.prompt {
   display: flex;
   color: white;
-  font-size: 16px;;
+  font-size: 16px;
   background-color: black;
   font-family: var(--content-typography-bold);
   padding: 8px 16px;
