@@ -13,7 +13,7 @@ function render(html) {
 
 const yourNumber = parseFloat(prompt("Introduzca un numerito, por favor", "0")); // paso 1
 
-for (i = 1; i <= yourNumber; i++) { // paso 2
+for (let i = 1; i <= yourNumber; i++) { // paso 2
   if (i % 5 === 0 && i % 3 === 0) { // paso 3
     render(`
       <span class="result__text red">FizzBuzz</span> 
