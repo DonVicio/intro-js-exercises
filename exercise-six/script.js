@@ -18,7 +18,7 @@ const calification = parseFloat(prompt("Introduzca su nota!", "0")); // paso 1
 
 if (!isNaN(calification) && calification < 5)  { // paso 2
     render(`  
-      <p class="result__text">Su nota es: <span class="number">${calification}%</span></p>
+      <p class="result__text">Su nota es: <span class="number">${calification}</span></p>
       <p class="result__text">SUSPENSO!</p>
       <button id="repeat" type="submit">Repetir!</button>
   `); 

@@ -13,7 +13,7 @@ function render(html) {
 
 const yourNumber = parseFloat(prompt("Introduzca un numerito, por favor", "0")); // paso 1
 
-for (i = 0; i <= yourNumber; i++) { // paso 2
+for (let i = 0; i <= yourNumber; i++) { // paso 2
   if (i % 2 === 0)  { // paso 3
     render(`  
       <p class="result__text">${i} es par</p> 
