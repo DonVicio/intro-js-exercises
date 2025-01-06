@@ -1,0 +1,15 @@
+.result__text {
+  color: #333;
+  font-size: 24px;
+}
+.red{
+  color: red;
+}
+
+.dni{
+  color: darkblue;
+}
+
+#EXERCISE_RESULT{
+  padding: 24px;
+}
